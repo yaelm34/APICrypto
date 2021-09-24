@@ -1,8 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import {getAll,getCoin} from './Api';
 
 function App() {
-
+  getAll();
+  getCoin("exgold");
   return (
     <div className="App">
       <header className="App-header">
