@@ -3,11 +3,10 @@ import './App.css';
 import {getAll,getCoin} from './Api';
 
 function App() {
-<<<<<<< HEAD:app/src/App.js
-=======
+
   getAll();
   getCoin("exgold");
->>>>>>> af6d868 (Connexion à l'API):apicrypto/src/App.js
+
   return (
     <div className="App">
       <header className="App-header">
