@@ -1,0 +1,11 @@
+Features:
+
+- Lister toutes les cryptos
+- Voir le détail des cryptos quand on clique dessus
+- Enregistrer des favoris 
+
+Technos:
+
+-NodeJS
+-React
+-Docker
