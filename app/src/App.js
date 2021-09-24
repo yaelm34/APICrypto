@@ -4,7 +4,7 @@ import {getAll,getCoin} from './Api';
 
 function App() {
 
-  getAll();
+  getAll(); 
   getCoin("exgold");
 
   return (
