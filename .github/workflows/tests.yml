@@ -1,8 +1,8 @@
-name: Application Tess Before Push
+name: Application Test Before Push
 
 on: [push]
 
 jobs:
   steps:
-    - run: cd app
-    - run: npm start
+  - run: cd app
+  - run: npm start
