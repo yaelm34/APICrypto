@@ -4,6 +4,5 @@ on: [push]
 
 jobs:
   steps:
-    - run: echo "TEST ..."
     - run: cd app
     - run: npm start
