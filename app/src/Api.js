@@ -1,15 +1,18 @@
 import axios from "axios";
 
 var result;
+var config = {
+  headers: {'Access-Control-Allow-Origin': '*'}
+};
 
-export function getAll(){
+export async function getAll(){
 
-    axios.get('https://api.coingecko.com/api/v3/coins/list')
-    .then(function (response) {
+  return  axios.get('https://api.coingecko.com/api/v3/coins/list', config)
+    /*.then(function (response) {
       result=response.data;
     });
-
-    return result;
+*/
+   // return result;
 }
 
 export function getCoin(id){
