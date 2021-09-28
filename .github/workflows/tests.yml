@@ -1,15 +1,8 @@
 name: Application Test Before Push
-
 on: push
-
-
 jobs:
-  build:
+  tests:
     runs-on: ubuntu-latest
-
-  steps:
-  - name: Go to app project
-    run: cd app
-
-  - name: Start server
-    run: npm start
+    steps:
+      - run: cd app
+      - run: npm install
