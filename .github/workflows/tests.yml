@@ -1,9 +1,6 @@
 name: Application Tess Before Push
 
-on:
-  push:
-    branches:
-      - master
+on: [push]
 
 jobs:
   steps:
