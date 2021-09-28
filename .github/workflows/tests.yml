@@ -1,0 +1,12 @@
+name: Application Tess Before Push
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  steps:
+    - run: echo "TEST ..."
+    - run: cd app
+    - run: npm start
