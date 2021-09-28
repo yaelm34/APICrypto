@@ -4,5 +4,5 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
-      - run: cd app
+      - run: cd ./app
       - run: npm install
