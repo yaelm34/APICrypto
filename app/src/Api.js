@@ -1,11 +1,11 @@
-import axios from "axios";
+const axios = require("axios");
 
 var result;
 var config = {
   headers: {'Access-Control-Allow-Origin': '*'}
 };
 
-export async function getAll(){
+async function getAll(){
 
   return  axios.get('https://api.coingecko.com/api/v3/coins/list', config)
     /*.then(function (response) {
@@ -15,7 +15,7 @@ export async function getAll(){
    // return result;
 }
 
-export function getCoin(id){
+function getCoin(id){
 
     axios.get('https://api.coingecko.com/api/v3/coins/'+id)
     .then(function (response) {
@@ -25,5 +25,4 @@ export function getCoin(id){
     return result;
 }
 
-
-
+module.exports = {getAll,getCoin};
