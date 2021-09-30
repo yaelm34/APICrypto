@@ -1,5 +1,5 @@
 name: Application Test Before Push/Merge
-on: [push,merge]
+on: push
 jobs:
   tests:
     runs-on: ubuntu-latest
