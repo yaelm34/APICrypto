@@ -15,7 +15,7 @@ jobs:
       - run: npm test
       - uses: docker/build-push-action@v2
         with:
-          context: .
+          file: ./Dockerfile
           tags: cryptoracle
           push: false
       - uses: addnab/docker-run-action@v3
