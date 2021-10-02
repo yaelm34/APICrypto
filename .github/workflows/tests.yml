@@ -11,13 +11,15 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '12'
+      - run: npm install
+      - run: npm test
       - uses: docker/build-push-action@v2
         with:
+          file: ./Dockerfile
           tags: cryptoracle
           push: false
       - uses: addnab/docker-run-action@v3
         with:
           image: cryptoracle
           run: echo "hello world"
-      - run: npm install
-      - run: npm test
+      
