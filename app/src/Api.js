@@ -8,11 +8,13 @@ var config = {
 async function getAll(){
 
   return  axios.get('https://api.coingecko.com/api/v3/coins/list', config)
-    /*.then(function (response) {
-      result=response.data;
-    });
-*/
-   // return result;
+
+}
+
+async function getTop(){
+
+  return  axios.get('https://api.coingecko.com/api/v3/coins', config)
+
 }
 
 function getCoin(id){
@@ -21,4 +23,4 @@ function getCoin(id){
     
 }
 
-module.exports = {getAll,getCoin};
+module.exports = {getAll,getCoin,getTop}; 
