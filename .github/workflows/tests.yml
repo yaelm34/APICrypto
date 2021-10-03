@@ -44,5 +44,5 @@ jobs:
        
         - uses: addnab/docker-run-action@v3
           with:
-              image: cryptoracle
+              image: pandav/cicd:latest
               run: echo "hello world"
