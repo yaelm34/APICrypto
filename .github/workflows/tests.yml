@@ -39,7 +39,7 @@ jobs:
         - uses: docker/build-push-action@v2
           with:
             context: ./app
-            tags: cryptoracle/cicd:latest
+            tags: cryptoracle/cicd:latest #e
             push: true
        
         - uses: addnab/docker-run-action@v3
