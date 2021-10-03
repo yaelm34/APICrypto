@@ -1,5 +1,5 @@
 import ListCrypto from "../../components/List"
-import { getAll } from "../../Api"
+import { getTop } from "../../Api"
 import { Component } from "react";
 
 class List extends Component {
@@ -7,13 +7,16 @@ class List extends Component {
       super();
       this.state = { cryptos: [], isLoaded:false };
     }
-  
+
     async componentDidMount() {
        var current = this;
-       getAll().then(function(res){
+       getTop().then(function(res){
           console.log("RES");
           console.log(res);
-          current.setState({ cryptos: res.data, isLoaded:true });
+
+          var list = res.data;
+          
+          current.setState({ cryptos: list, isLoaded:true });
        });
       
     }
@@ -22,7 +25,7 @@ class List extends Component {
       return (
         
         <div>
-            <h1>Toutes les cryptos disponibles :</h1>
+            <h1>Classement des cryptos les plus populaires :</h1>
             <ListCrypto cryptos={this.state.cryptos} isLoaded={this.state.isLoaded}/>
         </div>
         
