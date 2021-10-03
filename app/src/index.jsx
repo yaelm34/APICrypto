@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import Home from './pages/Home'
 import List from './pages/List'
 import Fav from './pages/Fav'
+import Details from './pages/Details'
 import Header from './components/Header'
 import Error from './components/Error'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
@@ -17,6 +18,9 @@ ReactDOM.render(
           </Route>
           <Route path="/list">
             <List />
+          </Route>
+          <Route path="/details/:id">
+            <Details />
           </Route>
           <Route path="/fav">
             <Fav />

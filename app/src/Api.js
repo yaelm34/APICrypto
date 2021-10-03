@@ -1,26 +1,24 @@
-import axios from "axios";
+const axios = require("axios");
 
 var result;
+var config = {
+  headers: {'Access-Control-Allow-Origin': '*'}
+};
 
-export function getAll(){
+async function getAll(){
 
-    axios.get('https://api.coingecko.com/api/v3/coins/list')
-    .then(function (response) {
+  return  axios.get('https://api.coingecko.com/api/v3/coins/list', config)
+    /*.then(function (response) {
       result=response.data;
     });
-
-    return result;
+*/
+   // return result;
 }
 
-export function getCoin(id){
+function getCoin(id){
 
-    axios.get('https://api.coingecko.com/api/v3/coins/'+id)
-    .then(function (response) {
-      result=response.data;
-    });
-
-    return result;
+   return axios.get('https://api.coingecko.com/api/v3/coins/'+id)
+    
 }
 
-
-
+module.exports = {getAll,getCoin};
