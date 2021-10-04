@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom'
 import { getCoin } from "../Api";
+let detailscoin = [];
  
 function DetailsCoin(props) {
 
@@ -16,10 +17,10 @@ function DetailsCoin(props) {
       )
     }*/
     getCoin(id).then(function(res){
-      console.log("RES DATA");
+      //console.log("RES DATA");
       console.log(res.data.description);
-      const details = res.data;
-      console.log("ICI " + details);
+      detailscoin = res.data.description.fr;
+      //console.log("ICI " + details);
       getDescription(res.data);
 
      });
@@ -27,20 +28,8 @@ function DetailsCoin(props) {
     
       
           return (
-            description.map((key, index) =>{
-              console.log(description);
-              return(
-
-                
-                <div>{key.description}</div>
-
-              );
             
-            
-            }
-          )
-
-          
+            <div>{detailscoin}</div>
 
           )
     
