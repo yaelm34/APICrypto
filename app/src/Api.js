@@ -1,3 +1,5 @@
+//import Cookies from 'universal-cookie';
+//import {useHistory} from 'react-router-dom';
 const axios = require("axios");
 
 var result;
@@ -21,6 +23,8 @@ function getCoin(id){
 
    return axios.get('https://api.coingecko.com/api/v3/coins/'+id)
     
+
 }
+
 
 module.exports = {getAll,getCoin,getTop}; 
