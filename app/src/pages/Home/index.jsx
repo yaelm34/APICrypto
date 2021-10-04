@@ -1,3 +1,6 @@
+import Cookies from 'universal-cookie';
+
+
 function Home() {
     return (
         <div>

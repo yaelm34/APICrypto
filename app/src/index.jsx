@@ -7,6 +7,10 @@ import Top from './pages/Top'
 import Header from './components/Header'
 import Error from './components/Error'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import Cookies from 'universal-cookie';
+
+const cookies = new Cookies();
+cookies.set('currentcookie', [], {path : '/', maxAge : 300});
 
 ReactDOM.render(
     <React.StrictMode>
